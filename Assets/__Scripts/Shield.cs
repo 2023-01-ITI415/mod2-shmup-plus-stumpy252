@@ -6,7 +6,7 @@ public class Shield : MonoBehaviour {
     [Header("Set in Inspector")]
     public float rotationsPerSecond = 0.1f;
 
-    [Header("Set Dynamically")]
+    [Header("Set Dynamically")][Range(0,4)]
     public int levelShown = 0;
 
     // This non-public variable will not appear in the Inspector

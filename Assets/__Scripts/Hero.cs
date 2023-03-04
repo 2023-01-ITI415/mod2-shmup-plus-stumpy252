@@ -15,9 +15,8 @@ public class Hero : MonoBehaviour {
     public float projectileSpeed = 40;
     public Weapon[] weapons;
 
-    [Header("Dynamic")] [Range(0,4)]
-    
-    private float _shieldLevel = 1;
+    [Header("Dynamic")][Range(0,4)]
+    public float _shieldLevel = 1;
 
     [Tooltip ("This variable holds a reference to the last triggering GameObject")]
     private GameObject lastTriggerGo = null;
@@ -140,7 +139,7 @@ public class Hero : MonoBehaviour {
         {
             return (_shieldLevel);
         }
-        set
+        private set
         {
             _shieldLevel = Mathf.Min(value, 4);
             // If the shield is going to be set to less than zero

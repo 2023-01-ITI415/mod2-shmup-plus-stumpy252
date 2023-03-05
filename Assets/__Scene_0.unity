@@ -540,7 +540,7 @@ MonoBehaviour:
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 5
     continuousDamage: 0
-    delayBetweenShots: 0.2
+    delayBetweenShots: 0.1
     velocity: 50
   - type: 2
     letter: S
@@ -550,7 +550,7 @@ MonoBehaviour:
     projectileColor: {r: 0.007843138, g: 0.9607844, b: 0.9960785, a: 1}
     damageOnHit: 5
     continuousDamage: 0
-    delayBetweenShots: 0.25
+    delayBetweenShots: 0.2
     velocity: 50
   - type: 6
     letter: 0
@@ -561,9 +561,19 @@ MonoBehaviour:
     continuousDamage: 0
     delayBetweenShots: 0
     velocity: 0
+  - type: 5
+    letter: L
+    color: {r: 1, g: 0, b: 1, a: 1}
+    weaponModelPrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
+      type: 3}
+    projectileColor: {r: 1, g: 0, b: 1, a: 1}
+    damageOnHit: 0.1
+    continuousDamage: 0.2
+    delayBetweenShots: 0
+    velocity: 50
   prefabPowerUp: {fileID: 1062273549804748, guid: 9649a9a79085a854d9990613a980f435,
     type: 3}
-  powerUpFrequency: 01000000010000000200000006000000
+  powerUpFrequency: 05000000010000000200000006000000
 --- !u!4 &302997030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3293744620739765933, guid: ae3a657191efe7040b52cc85f1d490eb,
@@ -1448,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac691aa6a0aaefe4aa8af67a198682ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsType: 1
+  boundsType: 0
   radius: 4
   keepOnScreen: 1
   screenLocs: 0

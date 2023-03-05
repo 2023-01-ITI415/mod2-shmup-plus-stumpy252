@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Main : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class Main : MonoBehaviour {
 
     [Header("Inscribed")]
     public bool spawnEnemies = true;
+    public TextMeshProUGUI score;
     public GameObject[] prefabEnemies; // Array of Enemy prefabs
     public float enemySpawnPerSecond = 0.5f; // # Enemies/second
     public float enemyInsetDefault = 1.5f; // Padding for position
@@ -23,6 +25,7 @@ public class Main : MonoBehaviour {
     };
 
     private BoundsCheck bndCheck;
+    private int scoreCount = 0;
 
 
     /// <summary>
@@ -48,6 +51,8 @@ public class Main : MonoBehaviour {
             // Set it to the position of the destroyed ship
             pu.transform.position = e.transform.position;
         }
+        S.scoreCount += e.score;
+        S.score.text = "Score: " + S.scoreCount.ToString();
     }
 
     private void Awake()

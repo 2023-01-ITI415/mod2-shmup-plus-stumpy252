@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 [RequireComponent(typeof(BoundsCheck))]
 public class Enemy : MonoBehaviour
 {
 
     [Header("Inscribed: Enemy")]
     public float speed = 10f; // The speed in m/s
+    
     public float fireRate = 0.3f; // Seconds/shot (Unused)
     public float health = 10;
     public int score = 100; // Points earned for destroying this
@@ -93,6 +96,7 @@ public class Enemy : MonoBehaviour
                     }
                     Destroy(this.gameObject);
                 }
+                
             }
             // Destroy the projectile regardless
             Destroy(otherGO);

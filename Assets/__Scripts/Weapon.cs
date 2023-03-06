@@ -136,9 +136,15 @@ public class Weapon : MonoBehaviour
 
             case eWeaponType.spread:
                 p = MakeProjectile(); // Make middle Projectile
-                p.vel = vel; ;
-                p = MakeProjectile(); // Make right Projectile
+                p.vel = vel; 
+                p = MakeProjectile(); 
                 p.transform.rotation = Quaternion.AngleAxis(30, Vector3.back);
+                p.vel = p.transform.rotation * vel;
+                p = MakeProjectile(); // Make first right Projectile
+                p.transform.rotation = Quaternion.AngleAxis(15, Vector3.back);
+                p.vel = p.transform.rotation * vel;
+                p = MakeProjectile(); // Make first left Projectile
+                p.transform.rotation = Quaternion.AngleAxis(-15, Vector3.back);
                 p.vel = p.transform.rotation * vel;
                 p = MakeProjectile(); // Make left Projectile
                 p.transform.rotation = Quaternion.AngleAxis(-30, Vector3.back);

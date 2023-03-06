@@ -542,7 +542,7 @@ MonoBehaviour:
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 4
     continuousDamage: 0
-    delayBetweenShots: 0.15
+    delayBetweenShots: 0.12
     velocity: 50
   - type: 2
     letter: S
@@ -552,7 +552,7 @@ MonoBehaviour:
     projectileColor: {r: 0.007843138, g: 0.9607844, b: 0.9960785, a: 1}
     damageOnHit: 4
     continuousDamage: 0
-    delayBetweenShots: 0.15
+    delayBetweenShots: 0.25
     velocity: 50
   - type: 6
     letter: 0
@@ -569,8 +569,8 @@ MonoBehaviour:
     weaponModelPrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
       type: 3}
     projectileColor: {r: 1, g: 0, b: 1, a: 1}
-    damageOnHit: 0.2
-    continuousDamage: 3.5
+    damageOnHit: 0.75
+    continuousDamage: 3
     delayBetweenShots: 0
     velocity: 50
   prefabPowerUp: {fileID: 1062273549804748, guid: 9649a9a79085a854d9990613a980f435,
